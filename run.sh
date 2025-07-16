@@ -113,6 +113,10 @@ else
   # Some programs just run better as flatpaks. Like discord/spotify
   #echo "Installing flatpaks (like discord and spotify)"
   #. install-flatpaks.sh
+
+  echo "Installing oh-my-zsh..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 fi
 
 echo "Setup complete! You may want to reboot your system."
