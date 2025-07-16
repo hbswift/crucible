@@ -16,7 +16,7 @@ cd ~
 if [ -d "$REPO_NAME" ]; then
   echo "Repository '$REPO_NAME' already exists. Skipping clone"
 else
-  git clone "$REPO_URL --depth=1"
+  git clone "$REPO_URL" --depth=1
 fi
 
 # Check if the clone was successful
