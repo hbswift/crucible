@@ -26,8 +26,8 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow zshrc
-  stow nvim
+  stow --adopt *
+  git restore .
 else
   echo "Failed to clone the repository."
   exit 1
