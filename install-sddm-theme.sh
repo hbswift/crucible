@@ -27,7 +27,7 @@ Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
 # TODO: check if dir exists
 echo "Copy over background image..."
-sudo cp ~/dotfiles/backgrounds/fern.jpg /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+sudo cp ~/.config/backgrounds/fern.jpg /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
 
 echo "Copy theme..."
 sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Themes/astronaut.conf /usr/share/sddm/themes/sddm-astronaut-theme/Themes/fern.conf 
