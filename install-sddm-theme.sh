@@ -25,6 +25,19 @@ echo "Editing vitrualkbd..."
 echo "[General]
 InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
 
+# TODO: check if dir exists
+echo "Copy over background image..."
+sudo cp ~/dotfiles/backgrounds/fern.jpg /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+
+echo "Copy theme..."
+sudo cp /usr/share/sddm/theme/sddm-astronaut-theme/Themes/astronaut.conf /usr/share/sddm/theme/sddm-astronaut-theme/Themes/fern.conf 
+
+echo "Replace image in new theme..."
+sudo sed -i 's|Background="[^"]*"|Background="Backgrounds/fern.jpg"|' /usr/share/sddm/theme/sddm-astronaut-theme/Themes/fern.conf 
+
+echo "Set new theme as default..."
+sudo sed -i 's|ConfigFile=Themes/[^ ]*|ConfigFile=Themes/fern.conf|' /usr/share/sddm/theme/sddm-astronaut-theme/metadata.desktop
+
 echo "Done."
 
 exit 0
